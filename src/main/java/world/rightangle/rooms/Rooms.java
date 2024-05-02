@@ -61,7 +61,7 @@ public class Rooms extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("v0.0.1 Alpha");
+        jLabel3.setText("v0.0.2 Alpha");
 
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
@@ -115,7 +115,7 @@ public class Rooms extends javax.swing.JFrame {
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
         JOptionPane.showMessageDialog(null,"Rooms" + "\n" +
-                                                "v0.0.1 Alpha, by Right Angle Productions, 2024" + "\n\n" +
+                                                "v0.0.2 Alpha, by Right Angle Productions, 2024" + "\n\n" +
                                                 "A game of walking around different rooms" + "\n\n" +
                                                 "Licensed under BSD 3-Clause License" + "\n" +
                                                 "(c) Right Angle Productions 2024",

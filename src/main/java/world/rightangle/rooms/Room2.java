@@ -7,6 +7,7 @@ package world.rightangle.rooms;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import java.awt.image.BufferedImage;
+import java.awt.Image;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,11 +68,17 @@ public class Room2 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 0, 0));
 
         photograph.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                photographMouseEntered(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 photographMouseExited(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                photographMouseEntered(evt);
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                photographMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                photographMouseReleased(evt);
             }
         });
 
@@ -157,17 +164,25 @@ public class Room2 extends javax.swing.JFrame {
         System.out.println("Room 2: Change photograph to sky.jpg");
     }//GEN-LAST:event_photographMouseExited
 
-    
-    private ImageIcon getImage(){
-        ImageIcon ico = new ImageIcon(); // default ico initialization bc java is a bitch and wont let me compile otherwise
+    private void photographMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_photographMousePressed
+        photographImgPath = "src/main/resources/parchment.png";
+        photograph.setIcon(getImage());
         
-        try {
-            BufferedImage img = ImageIO.read(new File(photographImgPath));
-            ico = new ImageIcon(img);
-        } 
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Room 2: Change photograph to parchment.png");
+    }//GEN-LAST:event_photographMousePressed
+
+    private void photographMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_photographMouseReleased
+        photographImgPath = "src/main/resources/storm.jpg";
+        photograph.setIcon(getImage());
+        
+        System.out.println("Room 2: Change photograph to storm.jpg");
+    }//GEN-LAST:event_photographMouseReleased
+
+    
+    private ImageIcon getImage(){ // get an ImageIcon for the photograph from its file path, then scale it
+        ImageIcon ico = new ImageIcon(photographImgPath);
+        
+        ico = new ImageIcon(ico.getImage().getScaledInstance(320, 240, Image.SCALE_DEFAULT)); // scale image down to photograph jLabel size (320x240)
         
         return ico;
     }
