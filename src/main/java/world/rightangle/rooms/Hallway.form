@@ -3,6 +3,9 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[640, 480]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -41,9 +44,11 @@
                       <Component id="btnDoor1" min="-2" pref="124" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnDoor2" min="-2" pref="124" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnDoor3" min="-2" pref="124" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="317" max="32767" attributes="0"/>
+              <EmptySpace pref="175" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -52,12 +57,15 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblRoomNum" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnDoor1" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
-                  <Component id="btnDoor2" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace min="111" pref="111" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnDoor1" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="btnDoor2" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="btnDoor3" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="112" max="32767" attributes="0"/>
+              <EmptySpace pref="105" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnQuitGame" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnReturnTitle" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -86,7 +94,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDoor1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="                   O"/>
+        <Property name="text" type="java.lang.String" value="              O"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoor1ActionPerformed"/>
@@ -102,10 +110,18 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDoor2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="                   O"/>
+        <Property name="text" type="java.lang.String" value="              O"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoor2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDoor3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="              O"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoor3ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

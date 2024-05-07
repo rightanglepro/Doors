@@ -19,7 +19,7 @@ import java.io.IOException;
  */
 public class Room2 extends javax.swing.JFrame {
 
-    private static String photographImgPath = "src/main/resources/sky.jpg";
+    private static String photographImgPath = "sky.jpg";
     
     /**
      * Creates new form Room2
@@ -45,6 +45,7 @@ public class Room2 extends javax.swing.JFrame {
         photograph = new javax.swing.JLabel(getImage());
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(640, 480));
 
         lblRoomNum.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         lblRoomNum.setText("Room 2");
@@ -129,7 +130,7 @@ public class Room2 extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnQuitGame)
                     .addComponent(btnReturnHallway))
@@ -151,28 +152,28 @@ public class Room2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnHallwayActionPerformed
 
     private void photographMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_photographMouseEntered
-        photographImgPath = "src/main/resources/storm.jpg";
+        photographImgPath = "storm.jpg";
         photograph.setIcon(getImage());
         
         System.out.println("Room 2: Change photograph to storm.jpg");
     }//GEN-LAST:event_photographMouseEntered
 
     private void photographMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_photographMouseExited
-        photographImgPath = "src/main/resources/sky.jpg";
+        photographImgPath = "sky.jpg";
         photograph.setIcon(getImage());
         
         System.out.println("Room 2: Change photograph to sky.jpg");
     }//GEN-LAST:event_photographMouseExited
 
     private void photographMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_photographMousePressed
-        photographImgPath = "src/main/resources/parchment.png";
+        photographImgPath = "parchment.png";
         photograph.setIcon(getImage());
         
         System.out.println("Room 2: Change photograph to parchment.png");
     }//GEN-LAST:event_photographMousePressed
 
     private void photographMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_photographMouseReleased
-        photographImgPath = "src/main/resources/storm.jpg";
+        photographImgPath = "storm.jpg";
         photograph.setIcon(getImage());
         
         System.out.println("Room 2: Change photograph to storm.jpg");
@@ -180,7 +181,7 @@ public class Room2 extends javax.swing.JFrame {
 
     
     private ImageIcon getImage(){ // get an ImageIcon for the photograph from its file path, then scale it
-        ImageIcon ico = new ImageIcon(photographImgPath);
+        ImageIcon ico = new ImageIcon(getClass().getClassLoader().getResource(photographImgPath));
         
         ico = new ImageIcon(ico.getImage().getScaledInstance(320, 240, Image.SCALE_DEFAULT)); // scale image down to photograph jLabel size (320x240)
         

@@ -37,6 +37,7 @@ public class Room1 extends javax.swing.JFrame {
         btnQuitGame = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(640, 480));
 
         lblRoomNum.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         lblRoomNum.setText("Room 1");
@@ -102,7 +103,7 @@ public class Room1 extends javax.swing.JFrame {
                 .addGroup(room1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmboxColors, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPickColor))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 249, Short.MAX_VALUE)
                 .addGroup(room1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnQuitGame)
                     .addComponent(btnReturnHallway))

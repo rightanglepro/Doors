@@ -31,8 +31,10 @@ public class Hallway extends javax.swing.JFrame {
         btnDoor1 = new javax.swing.JButton();
         btnReturnTitle = new javax.swing.JButton();
         btnDoor2 = new javax.swing.JButton();
+        btnDoor3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(640, 480));
 
         btnQuitGame.setText("Quit Game");
         btnQuitGame.addActionListener(new java.awt.event.ActionListener() {
@@ -44,7 +46,7 @@ public class Hallway extends javax.swing.JFrame {
         lblRoomNum.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         lblRoomNum.setText("Hallway");
 
-        btnDoor1.setText("                   O");
+        btnDoor1.setText("              O");
         btnDoor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoor1ActionPerformed(evt);
@@ -58,10 +60,17 @@ public class Hallway extends javax.swing.JFrame {
             }
         });
 
-        btnDoor2.setText("                   O");
+        btnDoor2.setText("              O");
         btnDoor2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoor2ActionPerformed(evt);
+            }
+        });
+
+        btnDoor3.setText("              O");
+        btnDoor3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoor3ActionPerformed(evt);
             }
         });
 
@@ -83,8 +92,10 @@ public class Hallway extends javax.swing.JFrame {
                         .addGap(57, 57, 57)
                         .addComponent(btnDoor1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnDoor2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(317, Short.MAX_VALUE))
+                        .addComponent(btnDoor2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDoor3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,10 +103,12 @@ public class Hallway extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblRoomNum)
                 .addGap(111, 111, 111)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDoor1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDoor2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnDoor1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDoor2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnDoor3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnQuitGame)
                     .addComponent(btnReturnTitle))
@@ -125,6 +138,11 @@ public class Hallway extends javax.swing.JFrame {
         new Room2().setVisible(true);
         System.out.println("Hallway: Open Room 2");
     }//GEN-LAST:event_btnDoor2ActionPerformed
+
+    private void btnDoor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoor3ActionPerformed
+        new Room3().setVisible(true);
+        System.out.println("Hallway: Open Room 3");
+    }//GEN-LAST:event_btnDoor3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,6 +182,7 @@ public class Hallway extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDoor1;
     private javax.swing.JButton btnDoor2;
+    private javax.swing.JButton btnDoor3;
     private javax.swing.JButton btnQuitGame;
     private javax.swing.JButton btnReturnTitle;
     private javax.swing.JLabel lblRoomNum;

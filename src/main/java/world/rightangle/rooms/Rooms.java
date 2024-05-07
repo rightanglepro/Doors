@@ -33,10 +33,11 @@ public class Rooms extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnStart = new javax.swing.JButton();
         btnAbout = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        lblVersion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Rooms 0.0.1 Alpha");
+        setMinimumSize(new java.awt.Dimension(640, 480));
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -61,7 +62,7 @@ public class Rooms extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("v0.0.2 Alpha");
+        lblVersion.setText("v0.0.3 Alpha");
 
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
@@ -80,7 +81,7 @@ public class Rooms extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAbout, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(lblVersion, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         panelTitleLayout.setVerticalGroup(
@@ -92,8 +93,8 @@ public class Rooms extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(50, 50, 50)
                 .addComponent(btnStart)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addComponent(lblVersion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAbout)
                 .addContainerGap())
@@ -107,7 +108,9 @@ public class Rooms extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,7 +118,7 @@ public class Rooms extends javax.swing.JFrame {
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
         JOptionPane.showMessageDialog(null,"Rooms" + "\n" +
-                                                "v0.0.2 Alpha, by Right Angle Productions, 2024" + "\n\n" +
+                                                "v0.0.3 Alpha, by Right Angle Productions, 2024" + "\n\n" +
                                                 "A game of walking around different rooms" + "\n\n" +
                                                 "Licensed under BSD 3-Clause License" + "\n" +
                                                 "(c) Right Angle Productions 2024",
@@ -167,7 +170,7 @@ public class Rooms extends javax.swing.JFrame {
     private javax.swing.JButton btnStart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblVersion;
     private javax.swing.JPanel panelTitle;
     // End of variables declaration//GEN-END:variables
 }
